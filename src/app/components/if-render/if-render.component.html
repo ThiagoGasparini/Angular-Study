@@ -1,0 +1,13 @@
+<div class="class">
+  @if (canShow === true) {
+  <div>Estamos mostrando isso porque foi permitido</div>
+  } @else {
+  <h2>Texto oculto pelo if</h2>
+  }
+
+  @if (name === 'Thiago Gasparini') {
+  <h1>Name: {{ name }}</h1>
+  } @else {
+  <h1>Name: Você passou o nome errado</h1>
+  }
+</div>
