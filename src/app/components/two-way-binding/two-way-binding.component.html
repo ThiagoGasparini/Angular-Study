@@ -1,0 +1,13 @@
+<div class="class">
+  <h1>two-way-binding</h1>
+  <form>
+    <input type="text" [(ngModel)]='name' name='name' placeholder='Digite seu nome'>
+    <input type="submit" value="Enviar">
+  </form>
+  @if (name !== '') {
+    <h2>O valor do input é: {{ name }}</h2>
+  } @else {
+    <h3>Digite algo no input</h3>
+  }
+  <button (click)='clearInput()'>Limpar input</button>
+</div>
