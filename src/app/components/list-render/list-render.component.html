@@ -1,0 +1,10 @@
+<div class="class">
+  <h1>Animais:</h1>
+  @for (animal of animals; track animal.id) {
+    <ul>
+      <li>Nome: {{ animal.name }} - Tipo: {{ animal.type }}</li>
+    </ul>
+  } @empty {
+    Empty list of animals
+  }
+</div>
