@@ -4,6 +4,7 @@
     <ul>
       <li>Nome: {{ animal.name }} - Tipo: {{ animal.id }}</li>
       <button (click)='showAge(animal)'>Show age</button>
+      <button (click)='removeAnimal(animal)'>Excluir</button>
     </ul>
   } @empty {
     Empty list of animals
