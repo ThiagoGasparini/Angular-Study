@@ -29,7 +29,7 @@ export class ListRenderComponent {
   constructor(private listService: ListService) {}
 
   showAge(animal: Animal): void {
-    this.animalAge = `O pet ${animal.name} tem ${animal.age}`
+    this.animalAge = `O pet ${animal.name} tem ${animal.age}`;
   }
 
   clearInfo(): void {
@@ -38,6 +38,9 @@ export class ListRenderComponent {
 
   removeAnimal(animal: Animal): void {
     this.animals = this.listService.remove(this.animals, animal);
+  }
 
+  incAge(animal: Animal): void {
+    this.listService.incAge(animal);
   }
 }

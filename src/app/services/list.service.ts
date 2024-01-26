@@ -10,4 +10,8 @@ export class ListService {
   remove(animals: Animal[], animal: Animal) {
     return animals.filter((a) => a.name !== animal.name);
   }
+
+  incAge(animal: Animal) {
+    animal.age++;
+  }
 }

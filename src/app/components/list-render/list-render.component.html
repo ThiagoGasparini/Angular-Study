@@ -2,9 +2,10 @@
   <h1>Animais:</h1>
   @for (animal of animals; track animal.id) {
     <ul>
-      <li>Nome: {{ animal.name }} - Tipo: {{ animal.id }}</li>
+      <li>Nome: {{ animal.name }} - Tipo: {{ animal.type }} - Idade: {{ animal.age }}</li>
       <button (click)='showAge(animal)'>Show age</button>
       <button (click)='removeAnimal(animal)'>Excluir</button>
+      <button (click)='incAge(animal)'>Incrementar Idade</button>
     </ul>
   } @empty {
     Empty list of animals
