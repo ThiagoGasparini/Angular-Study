@@ -7,10 +7,12 @@ import { EventsComponent } from './components/events/events.component';
 import { EmitterComponent } from './components/emitter/emitter.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 export const routes: Routes = [
   { path: '', component: FirstComponentComponent },
   { path: 'ListRender', component: ListRenderComponent },
+  { path: 'ListRender/:id', component: ItemDetailComponent },
   { path: 'Directives', component: DirectivesComponent },
   { path: 'IfRender', component: IfRenderComponent },
   { path: 'Events', component: EventsComponent },
