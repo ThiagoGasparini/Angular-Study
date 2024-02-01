@@ -2,7 +2,7 @@
   <h1>Animais:</h1>
   @for (animal of animals; track animal.id) {
     <ul>
-      <li>Nome: {{ animal.name }} - Tipo: {{ animal.type }} - Idade: {{ animal.age }}</li>
+      <li>Nome: <a routerLink='/ListRender/{{ animal.id }}'>{{ animal.name }}</a> - Tipo: {{ animal.type }} - Idade: {{ animal.age }}</li>
       <button (click)='showAge(animal)'>Show age</button>
       <button (click)='removeAnimal(animal)'>Excluir</button>
       <button (click)='incAge(animal)'>Incrementar Idade</button>

@@ -1,23 +1,17 @@
 import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { Animal } from '../../Animal';
 import { ListService } from '../../services/list.service';
 
 @Component({
   selector: 'app-list-render',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './list-render.component.html',
   styleUrl: './list-render.component.css',
 })
 export class ListRenderComponent {
   animals: Animal[] = [];
-
-  animal: Animal = {
-    id: 1,
-    name: 'Lupi',
-    type: 'Dog',
-    age: 15,
-  };
 
   animalAge: string = '';
 
