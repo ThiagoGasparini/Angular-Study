@@ -28,7 +28,8 @@ export class ListRenderComponent {
   }
 
   removeAnimal(animal: Animal): void {
-    this.animals = this.listService.remove(this.animals, animal);
+    this.animals = this.animals.filter((a) => a.name !== animal.name);
+    this.listService.remove(animal.id).subscribe();
   }
 
   incAge(animal: Animal): void {
@@ -36,6 +37,8 @@ export class ListRenderComponent {
   }
 
   getAnimals(): void {
-    this.listService.getAll().subscribe((response) => (this.animals = response));
+    this.listService
+      .getAll()
+      .subscribe((response) => (this.animals = response));
   }
 }
